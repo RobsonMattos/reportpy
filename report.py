@@ -1,10 +1,14 @@
-# Robson Mattos
-# rjnmattos@gmail.com
+#!Python3.7.2
 
 import psycopg2
 
 DBNAME = "news"
-conn = psycopg2.connect(dbname=DBNAME)
+
+try:
+    conn = psycopg2.connect(dbname=DBNAME)
+except:
+    'Bad news! An error occurred while trying to connect to the database.'
+
 cursor = conn.cursor()
 
 print'S u m m a r y'
@@ -16,7 +20,8 @@ def quiz(sql):
     results = cursor.fetchall()
 
     for result in results:
-        print (result[0])
+        print(result[0])
+
 
 quiz('select * from vw_quiz_one')
 quiz('select * from vw_quiz_two')

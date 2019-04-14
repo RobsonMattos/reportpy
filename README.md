@@ -6,7 +6,7 @@ This project, developed in python 3, aims to present an informative summary of t
 - On which days more than 1% of the requests generated errors.
 
 # Prerequisites:
-This reporting tool is a Python program that uses the psycopg2 module to connect to the database.
+This reporting tool is a Python program that uses the `psycopg2` module to connect to the database.
 To execute:
     - you'll need to have python3 installed
     - Install psycopg2
